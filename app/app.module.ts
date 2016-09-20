@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { HeroService } from './hero.service';
 
 import { DashboardComponent } from  './dashboard.component';
 import { HeroesComponent } from './heroes.component';
@@ -21,7 +23,8 @@ import { routing } from './app.routing';
         HeroesComponent,
         HeroDetailComponent
     ],
-    bootstrap: [ AppComponent ]
+    bootstrap: [ AppComponent ],
+    providers: [HeroService]
 })
 
 export class AppModule { }
